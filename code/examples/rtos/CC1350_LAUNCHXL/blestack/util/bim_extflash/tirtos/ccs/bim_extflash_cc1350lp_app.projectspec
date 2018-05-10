@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projectSpec>
+    <project
+        name="bim_extflash_cc1350lp"
+        device="CC1350F128"
+        cgtVersion="16.9"
+        connection="common/targetdb/connections/TIXDS110_Connection.xml"
+        toolChain="TI"
+        linkerCommandFile="cc26xx_bim_ext_flash.cmd"
+
+        preBuildStep=""
+        postBuildStep="${CG_TOOL_HEX}  -order MS --memwidth=8 --romwidth=8 --intel -o ${ProjName}.hex ${ProjName}"
+
+        description=""
+        launchWizard="false">
+
+        <!-- Project properties -->
+
+        <property name="products" value="com.ti.SIMPLELINK_CC13X0_SDK:2_10_00_36"/>
+        <property name="xdcToolsVersion" value="3.50.05.12.core"/>
+        <property name="target" value="ti.targets.arm.elf.M3"/>
+        <property name="platform" value="ti.platforms.simplelink:CC1350F128"/>
+        <property name="buildProfile" value="release"/>
+        <property name="isHybrid" value="true"/>
+        <property name="configuroOptions" value="--compileOptions &quot;${COMPILER_FLAGS} &quot; "/>
+
+        <configuration
+            name="FlashOnly"
+        compilerBuildOptions=" -mv7M3 --code_state=16 --abi=eabi -me -O0 --opt_for_speed=0 -g --c99 --gcc --gen_func_subsections=on  --display_error_number --diag_warning=255 --diag_wrap=off
+        -DBOOT_LOADER
+        -DCC2650ST_0120
+        -DDEBUG
+        -DKEEP_INTVECS
+        -Dccs
+        -DxNO_COPY
+
+        -I${CG_TOOL_ROOT}/include
+        -I${PROJECT_BUILD_BASE}/src/cc2640/board
+        -I${PROJECT_BUILD_BASE}/src/cc1350/board/cc1350lp
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/common/cc26xx
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/profiles/oad/cc26xx
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/target/_common
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/target
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/target/_common/cc26xx
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/inc
+        -I${CC13XXWARE}
+        -I${CC13XXWARE}/driverlib
+        -I${CC13XXWARE}/inc
+        "
+        linkerBuildOptions="
+        --define KEEP_INTVECS=1
+        -l${CC13XXWARE}/driverlib/bin/ccs/driverlib.lib
+        -x
+        --diag_suppress=16002-D
+        --diag_suppress=10247-D
+        --diag_suppress=10325-D
+        --diag_suppress=10229-D
+        -I${CG_TOOL_ROOT}/lib
+        -I${CG_TOOL_ROOT}/include
+        -I${CC13XXWARE}/driverlib/bin/ccs/
+
+        "
+        >
+        </configuration>
+
+        <pathVariable name="CC13XXWARE" path="${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/devices/cc13x0" scope="project"></pathVariable>
+        <pathVariable name="TI_BLE_SDK_BASE" path="../../../../../../../.." scope="project"></pathVariable>
+        <pathVariable name="PROJECT_BUILD_BASE" path="../.." scope="project"></pathVariable>
+
+        <!-- Application Folder -->
+        <file path="PROJECT_BUILD_BASE/src/cc2640/bim_main.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="PROJECT_BUILD_BASE/src/cc2640/ccfg_app_ble.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="PROJECT_BUILD_BASE/src/cc2640/baseloaderentry_ti.s" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="PROJECT_BUILD_BASE/src/cc2640/bls_bsp.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="CC13XXWARE/startup_files/startup_ccs.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+        <!-- ExternalFlash Folder -->
+        <file path="PROJECT_BUILD_BASE/src/cc2640/board/ext_flash.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="ExternalFlash" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="PROJECT_BUILD_BASE/src/cc2640/board/ext_flash.h" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="ExternalFlash" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+        <!-- SPI Folder -->
+        <file path="PROJECT_BUILD_BASE/src/cc2640/board/bsp_spi.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="SPI" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="PROJECT_BUILD_BASE/src/cc2640/board/bsp_spi.h" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="SPI" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+        <!-- TOOLS Folder -->
+        <file path="TI_BLE_SDK_BASE/source/ti/blestack/common/cc26xx/ccs/cc26xx_bim_ext_flash.cmd" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="TOOLS" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+    </project>
+</projectSpec>

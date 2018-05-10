@@ -1,0 +1,8 @@
+/* WARNING - Do not modify this line and anything below this line, the area is overwritten by Boundary tool */
+/* Boundary auto gen parser version 1.0.0 */
+
+/* IAR Compiler Command Line Options */
+/* Auto-generated compiler option(s) - do not edit */
+
+-D ICALL_STACK0_ADDR=0x0000A000ul
+-D SNV_FIRST_PAGE=0x0000001Dul

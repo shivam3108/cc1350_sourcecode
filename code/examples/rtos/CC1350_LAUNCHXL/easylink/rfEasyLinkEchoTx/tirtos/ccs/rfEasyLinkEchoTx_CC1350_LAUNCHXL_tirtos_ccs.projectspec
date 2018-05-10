@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSpec>
+    <applicability>
+        <when>
+            <context
+                deviceFamily="ARM"
+                deviceId="Cortex M.CC1350F128"
+            />
+        </when>
+    </applicability>
+
+    <import spec="${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/kernel/tirtos/builds/CC1350_LAUNCHXL/release/ccs/tirtos_builds_CC1350_LAUNCHXL_release_ccs.projectspec"/>
+
+    <project
+        title="RF EasyLink Echo (TX, Packet Originator)"
+        name="rfEasyLinkEchoTx_CC1350_LAUNCHXL_tirtos_ccs"
+        toolChain="TI"
+        connection="TIXDS110_Connection.xml"
+        device="Cortex M.CC1350F128"
+        ignoreDefaultDeviceSettings="true"
+        ignoreDefaultCCSSettings="true"
+        references="tirtos_builds_CC1350_LAUNCHXL_release_ccs"
+        compilerBuildOptions=" -I${PROJECT_ROOT} -DDeviceFamily_CC13X0 -DCCFG_FORCE_VDDR_HH=0 -I${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/posix/ccs --silicon_version=7M3 --code_state=16 --little_endian --display_error_number --diag_warning=255 --diag_wrap=off --gen_func_subsections=on --float_support=vfplib --symdebug:dwarf -I${CG_TOOL_ROOT}/include"
+        linkerBuildOptions=" -l${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/display/lib/display.aem3 -l${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/grlib/lib/ccs/m3/grlib.a -l${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/drivers/rf/lib/rf_multiMode_cc13x0.aem3 -l${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/drivers/lib/drivers_cc13x0.aem3 -l${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/drivers/pdm/lib/pdm_cc13x0.aem3 -l${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/kernel/tirtos/packages/ti/dpl/lib/dpl_cc13x0.aem3 -l${GENERATED_LIBRARIES} -l${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/devices/cc13x0/driverlib/bin/ccs/driverlib.lib --warn_sections --display_error_number --diag_wrap=off --rom_model -i${CG_TOOL_ROOT}/lib -llibc.a"
+        description="An EasyLink echo example">
+
+        <property name="buildProfile" value="release"/>
+        <property name="isHybrid" value="true"/>
+        <group id="rfEasyLinkEchoTx.SIMPLELINK_CC13X0_SDK.CC1350_LAUNCHXL.easylink.TI"/>
+        <file path="../../easylink/EasyLink.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="easylink">
+        </file>
+        <file path="../../overview.rov.json" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../easylink/EasyLink.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="easylink">
+        </file>
+        <file path="../../smartrf_settings/smartrf_settings.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="smartrf_settings">
+        </file>
+        <file path="../../smartrf_settings/smartrf_settings_predefined.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="smartrf_settings">
+        </file>
+        <file path="../../smartrf_settings/smartrf_settings.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="smartrf_settings">
+        </file>
+        <file path="../../smartrf_settings/smartrf_settings_predefined.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="smartrf_settings">
+        </file>
+        <file path="../../EasyLinkEcho_ErrorTxRx.png" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../README.md" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../EasyLinkEcho_MissedFirstPacket.png" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../rfEasyLinkEchoTx.c" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../EasyLinkEcho_MissingFirstCouplePackets.png" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../EasyLinkEcho_PerfectEcho.png" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../ccfg.c" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../CC1350_LAUNCHXL.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../Board.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../CC1350_LAUNCHXL.c" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/boards/CC1350_LAUNCHXL/Board.html" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../../tirtos/ccs/CC1350_LAUNCHXL_TIRTOS.cmd" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+    </project>
+</projectSpec>
+

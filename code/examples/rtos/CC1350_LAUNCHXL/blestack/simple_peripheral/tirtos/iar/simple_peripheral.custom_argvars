@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<iarUserArgVars>
+  <group active="true" name="CC26xx TI-RTOS">
+    <variable>
+      <name>TI_RTOS_DRIVERS_BASE</name>
+      <value>C:\ti\simplelink_cc13x0_sdk_2_10_00_36\source</value>
+    </variable>
+    <variable>
+      <name>XDCPATH</name>
+      <value>$TI_RTOS_KERNEL$\packages;$TI_RTOS_DRIVERS_BASE$</value>
+    </variable>
+    <variable>
+      <name>CC13XXWARE</name>
+      <value>$TI_RTOS_DRIVERS_BASE$\ti\devices\cc13x0</value>
+    </variable>
+    <variable>
+      <name>XDCROOT</name>
+      <value>C:\ti\xdctools_3_50_05_12_core</value>
+    </variable>
+    <variable>
+      <name>BLE_SRC</name>
+      <value>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\blestack</value>
+    </variable>
+    <variable>
+      <name>SRC_COMMON</name>
+      <value>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\blestack</value>
+    </variable>
+    <variable>
+      <name>TOOLS_BLE</name>
+      <value>$PROJ_DIR$\..\..\..\..\..\..\..\..\tools\blestack</value>
+    </variable>
+    <variable>
+      <name>ROM</name>
+      <value>$PROJ_DIR$\..\..\..\..\..\..\..\..\source\ti\blestack\rom\</value>
+    </variable>
+    <variable>
+      <name>TI_RTOS_KERNEL</name>
+      <value>C:\ti\simplelink_cc13x0_sdk_2_10_00_36\kernel\tirtos</value>
+    </variable>
+  </group>
+</iarUserArgVars>
+
+

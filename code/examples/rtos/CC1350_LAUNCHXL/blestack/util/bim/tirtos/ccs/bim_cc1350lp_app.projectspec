@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projectSpec>
+    <project
+        name="bim_cc1350lp"
+        device="CC1350F128"
+        cgtVersion="16.9"
+        connection="common/targetdb/connections/TIXDS110_Connection.xml"
+        toolChain="TI"
+        linkerCommandFile="cc13xx_bim_dual_img.cmd"
+
+        preBuildStep=""
+        postBuildStep="${CG_TOOL_HEX}  -order MS --memwidth=8 --romwidth=8 --intel -o ${ProjName}.hex ${ProjName}"
+
+        description=""
+        launchWizard="false">
+
+        <!-- Project properties -->
+
+        <property name="products" value="com.ti.SIMPLELINK_CC13X0_SDK:2_10_00_36"/>
+        <property name="xdcToolsVersion" value="3.50.05.12.core"/>
+        <property name="target" value="ti.targets.arm.elf.M3"/>
+        <property name="platform" value="ti.platforms.simplelink:CC1350F128"/>
+        <property name="buildProfile" value="release"/>
+        <property name="isHybrid" value="true"/>
+        <property name="configuroOptions" value="--compileOptions &quot;${COMPILER_FLAGS} &quot; "/>
+
+        <configuration
+            name="FlashOnly"
+        compilerBuildOptions=" -mv7M3 --code_state=16 --abi=eabi -me -O0 --opt_for_speed=0 -g --c99 --gcc --gen_func_subsections=on  --display_error_number --diag_warning=255 --diag_wrap=off
+        -DxNO_COPY
+        -DBOOT_LOADER
+
+        -I${CG_TOOL_ROOT}/include
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/target/_common
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/target
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/target/_common/cc26xx
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/hal/src/inc
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/services/src/nv
+        -I${TI_BLE_SDK_BASE}/source/ti/blestack/services/src/nv/cc26xx
+        -I${CC13XXWARE}/
+        -I${CC13XXWARE}/driverlib
+        -I${CC13XXWARE}/inc
+        "
+        linkerBuildOptions="
+        -l${CC13XXWARE}/driverlib/bin/ccs/driverlib.lib
+        -x
+        --diag_suppress=16002-D
+        --diag_suppress=10247-D
+        --diag_suppress=10325-D
+        --diag_suppress=10229-D
+        "
+        >
+        </configuration>
+
+        <pathVariable name="CC13XXWARE" path="${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source/ti/devices/cc13x0" scope="project"></pathVariable>
+        <pathVariable name="TI_BLE_SDK_BASE" path="../../../../../../../.." scope="project"></pathVariable>
+        <pathVariable name="PROJECT_BUILD_BASE" path="../.." scope="project"></pathVariable>
+
+        <!-- Application Folder -->
+        <file path="PROJECT_BUILD_BASE/src/bim_main.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="PROJECT_BUILD_BASE/src/ccfg_app_ble.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="CC13XXWARE/startup_files/startup_ccs.c" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+        <!-- TOOLS Folder -->
+        <file path="TI_BLE_SDK_BASE/source/ti/blestack/common/cc26xx/ccs/cc13xx_bim_dual_img.cmd" openOnCreation="" excludeFromBuild="false" action="link" targetDirectory="TOOLS" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+    </project>
+</projectSpec>

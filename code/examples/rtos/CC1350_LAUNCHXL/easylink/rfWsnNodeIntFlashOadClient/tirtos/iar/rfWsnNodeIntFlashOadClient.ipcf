@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IAR Project Connection File -->
+
+<iarProjectConnection version="1.2" name="RF Wireless Sensor Network Internal Flash OAD Node" oneShot="true"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="IarProjectConnection_1.2.xsd">
+
+  <device>
+    <name>CC1350F128</name>
+  </device>
+
+  <extraOptions>
+    <args>
+      <arg>-f</arg>
+      <arg>$PROJ_DIR$/configPkg/compiler.opt.defs</arg>
+      <arg>-I$PROJ_DIR$</arg>
+      <arg>-DOAD_BLOCK_SIZE=64</arg>
+      <arg>-DFEATURE_OAD_ONCHIP</arg>
+      <arg>-DHAL_IMAGE_A</arg>
+      <arg>-DDeviceFamily_CC13X0</arg>
+      <arg>-DCCFG_FORCE_VDDR_HH=0</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/posix/iar</arg>
+      <arg>--debug</arg>
+      <arg>--silent</arg>
+      <arg>-e</arg>
+      <arg>--aeabi</arg>
+      <arg>--thumb</arg>
+      <arg>--diag_suppress=Pa050</arg>
+    </args>
+  </extraOptions>
+
+  <asmIncludePath>
+    <path>$PROJ_DIR$</path>
+  </asmIncludePath>
+
+  <asmDefines>
+  </asmDefines>
+
+  <linkerFile>
+    <override>true</override>
+    <path>$PROJ_DIR$/$PROJ_FNAME$_CC1350_LAUNCHXL_TIRTOS_OAD.icf</path>
+  </linkerFile>
+
+  <linkerExtraOptions>
+    <args>
+      <arg>-f</arg>
+      <arg>$PROJ_DIR$/configPkg/linker.cmd</arg>
+      <arg>--config_def=FEATURE_OAD_ONCHIP=1</arg>
+      <arg>--config_def=HAL_IMAGE_A=1</arg>
+      <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/display/lib/display.arm3</arg>
+      <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/grlib/lib/iar/m3/grlib.a</arg>
+      <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/drivers/rf/lib/rf_multiMode_cc13x0.arm3</arg>
+      <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/drivers/lib/drivers_cc13x0.arm3</arg>
+      <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/drivers/pdm/lib/pdm_cc13x0.arm3</arg>
+      <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/kernel/tirtos/packages/ti/dpl/lib/dpl_cc13x0.arm3</arg>
+      <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/devices/cc13x0/driverlib/bin/iar/driverlib.lib</arg>
+      <arg>--silent</arg>
+      <arg>--cpu=Cortex-M3</arg>
+      <arg>--redirect</arg>
+      <arg>_Printf=_PrintfSmall</arg>
+      <arg>--redirect</arg>
+      <arg>_Scanf=_ScanfSmall</arg>
+    </args>
+  </linkerExtraOptions>
+
+  <customBuildTools>
+    <customBuildTool name="configuro">   <!-- Custom build tool that will be assigned to a file group -->
+      <fileExtensions>.cfg</fileExtensions>
+      <command>"$XDCROOT$/bin/stderr"</command>
+      <output>
+        <path>$PROJ_DIR$/configPkg/package.mak</path>
+      </output>
+    </customBuildTool>
+  </customBuildTools>
+
+  <heaps>
+    <heap> <!-- If omitted, id="0" -->
+      <size>0</size>
+    </heap>
+    <heap id="1">
+      <size>0</size>
+    </heap>
+  </heaps>
+  <stacks>
+    <stack> <!-- If omitted, id="0" -->
+      <size>512</size>
+    </stack>
+  </stacks>
+
+  <preBuild>
+    <command>"$XDCROOT$/xs" --xdcpath="$XDCPATH$" iar.tools.configuro -c "$TOOLKIT_DIR$" --cc "$COMPILER_PATH$" --device "$DEVICE$" --compileOptions $COMPILER_ARGS_ROOT_QUOTED$ --linkOptions $LINKER_ARGS_QUOTED$ --profile release --projFile "$PROJ_PATH$"</command>
+  </preBuild>
+
+  <postBuild>
+    <command>ielftool.exe --ihex --verbose "$PROJ_DIR$\Debug\Exe\$PROJ_FNAME$.out" "$PROJ_DIR$\Debug\Exe\$PROJ_FNAME$.hex"</command>
+  </postBuild>
+
+  <files>
+    <group name="Source files">
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_client.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_client.c</path>
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_protocol.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_protocol.c</path>
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_storage.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_storage.c</path>
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_target_internal_flash.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_target_internal_flash.c</path>
+      <path copyTo="$PROJ_DIR$/SceAdc.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/SceAdc.c</path>
+      <path copyTo="$PROJ_DIR$/easylink/EasyLink.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/easylink/EasyLink.c</path>
+      <path copyTo="$PROJ_DIR$/smartrf_settings/smartrf_settings.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/smartrf_settings/smartrf_settings.c</path>
+      <path copyTo="$PROJ_DIR$/smartrf_settings/smartrf_settings_predefined.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/smartrf_settings/smartrf_settings_predefined.c</path>
+      <path copyTo="$PROJ_DIR$/NodeTask.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/NodeTask.c</path>
+      <path copyTo="$PROJ_DIR$/rfWsnNode.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/rfWsnNode.c</path>
+      <path copyTo="$PROJ_DIR$/NodeRadioTask.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/NodeRadioTask.c</path>
+      <path copyTo="$PROJ_DIR$/sce/scif_framework.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/sce/scif_framework.c</path>
+      <path copyTo="$PROJ_DIR$/sce/scif_osal_tirtos.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/sce/scif_osal_tirtos.c</path>
+      <path copyTo="$PROJ_DIR$/sce/scif.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/sce/scif.c</path>
+      <path copyTo="$PROJ_DIR$/CC1350_LAUNCHXL.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/CC1350_LAUNCHXL.c</path>
+      <path copyTo="$PROJ_DIR$/$PROJ_FNAME$_CC1350_LAUNCHXL_TIRTOS_OAD.icf">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/tirtos/iar/CC1350_LAUNCHXL_TIRTOS_OAD.icf</path>
+    </group>
+
+    <group name="Header files">
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_client.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_client.h</path>
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_protocol.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_protocol.h</path>
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_storage.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_storage.h</path>
+      <path copyTo="$PROJ_DIR$/oad/native_oad/oad_target.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/oad/native_oad/oad_target.h</path>
+      <path copyTo="$PROJ_DIR$/RadioProtocol.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/RadioProtocol.h</path>
+      <path copyTo="$PROJ_DIR$/SceAdc.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/SceAdc.h</path>
+      <path copyTo="$PROJ_DIR$/easylink/EasyLink.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/easylink/EasyLink.h</path>
+      <path copyTo="$PROJ_DIR$/smartrf_settings/smartrf_settings.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/smartrf_settings/smartrf_settings.h</path>
+      <path copyTo="$PROJ_DIR$/smartrf_settings/smartrf_settings_predefined.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/smartrf_settings/smartrf_settings_predefined.h</path>
+      <path copyTo="$PROJ_DIR$/NodeTask.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/NodeTask.h</path>
+      <path copyTo="$PROJ_DIR$/NodeRadioTask.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/NodeRadioTask.h</path>
+      <path copyTo="$PROJ_DIR$/sce/scif_osal_tirtos.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/sce/scif_osal_tirtos.h</path>
+      <path copyTo="$PROJ_DIR$/sce/scif_framework.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/sce/scif_framework.h</path>
+      <path copyTo="$PROJ_DIR$/sce/scif.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/sce/scif.h</path>
+      <path copyTo="$PROJ_DIR$/CC1350_LAUNCHXL.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/CC1350_LAUNCHXL.h</path>
+      <path copyTo="$PROJ_DIR$/Board.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/Board.h</path>
+    </group>
+
+    <group name="Configuration files" customBuildTool="configuro">
+       <path copyTo="$PROJ_DIR$/$PROJ_FNAME$.cfg">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/rfWsnNodeIntFlashOadClient.cfg</path>
+    </group>
+
+    <group name="Documentation" build="false">
+      <path copyTo="$PROJ_DIR$/README.md">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/easylink/rfWsnNodeIntFlashOadClient/README.md</path>
+      <path reference="$PROJ_DIR$/Board.html">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/boards/CC1350_LAUNCHXL/Board.html</path>
+    </group>
+  </files>
+</iarProjectConnection>

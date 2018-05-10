@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IAR Project Connection File -->
+
+<iarProjectConnection version="1.2" name="collector_cc1350lp" oneShot="true"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="IarProjectConnection_1.2.xsd">
+
+  <device>
+    <name>CC1350F128</name>
+  </device>
+
+  <extraOptions>
+    <args>
+      <arg>-I$PROJ_DIR$</arg>
+      <arg>-f$PROJ_DIR$/Tools/configPkg/compiler.opt.defs</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\subg</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/kernel/tirtos/</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/</arg>
+      <arg>-I$XDCROOT$\packages</arg>
+      <arg>-I$XDCROOT$\packages\xdc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\subg</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\CC13X0_LAUNCHXL</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\CC1310_CC1190</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\api\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\stack\src</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\stack\tirtos\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\stack\tirtos\src</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\heapmgr</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\_common</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\_common\cc13xx</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\icall\src\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\aes</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\appasrt</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\nv</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\nv\cc26xx</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\saddr</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\sdata</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\stack\src\icall</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\fh</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\high_level</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\rom</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\inc\cc13xx</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\low_level\cc13xx</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\low_level\cc13xx\subg</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\tracer</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/devices/cc13x0/</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/devices/cc13x0/\inc</arg>
+      <arg>-I$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/devices/cc13x0/\driverlib</arg>
+      <arg>-DUSE_CORE_SDK</arg>
+      <arg>-DRF_MULTI_MODE</arg>
+      <arg>-DTEMP_SENSOR</arg>
+      <arg>-DAUTO_START</arg>
+      <arg>-DxASSERT_LEDS</arg>
+      <arg>-DNV_RESTORE</arg>
+      <arg>-DFEATURE_FH_OPT</arg>
+      <arg>-DxPOWER_MEAS</arg>
+      <arg>-DMAX_DEVICE_TABLE_ENTRIES=50</arg>
+      <arg>-DBOARD_DISPLAY_USE_UART</arg>
+      <arg>-DxBOARD_DISPLAY_USE_LCD</arg>
+      <arg>-DONE_PAGE_NV</arg>
+      <arg>-DONE_PAGE_NV_FULL_HDR</arg>
+      <arg>-DDEVICE_FAMILY=cc13x0</arg>
+      <arg>-DDeviceFamily_CC13X0</arg>
+      <arg>-DCC13XX_LAUNCHXL</arg>
+      <arg>-DCCFG_FORCE_VDDR_HH=0</arg>
+      <arg>-DSET_CCFG_BL_CONFIG_BL_LEVEL=0x00</arg>
+      <arg>-DSET_CCFG_BL_CONFIG_BL_ENABLE=0xC5</arg>
+      <arg>-DSET_CCFG_BL_CONFIG_BL_PIN_NUMBER=0x0D</arg>
+      <arg>-DSET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE=0xC5</arg>
+      <arg>-DHEAPMGR_SIZE=0</arg>
+      <arg>-DUSE_ICALL</arg>
+      <arg>-DSTACK_LIBRARY</arg>
+      <arg>-DICALL_LITE</arg>
+      <arg>-DRCN_APP_ASSERT</arg>
+      <arg>-DHAL_ASSERT_SPIN</arg>
+      <arg>-DICALL_HOOK_ABORT_FUNC=halAssertHandler</arg>
+      <arg>-Dxdc_runtime_Log_DISABLE_ALL</arg>
+      <arg>-Dxdc_runtime_Assert_DISABLE_ALL</arg>
+      <arg>-DxPREAMBLE_COMPATIBILITY</arg>
+      <arg>-DxSTATIC_MAC_SECURITY_DEFAULTS</arg>
+      <arg>-Dxdc_target_types__=iar/targets/arm/std.h</arg>
+      <arg>-Dxdc_target_name__=M3</arg>
+      <arg>-DFEATURE_ENHANCED_ACK</arg>
+      <arg>-DFEATURE_SYSTEM_STATS</arg>
+      <arg>-DxFCS_TYPE16</arg>
+      <arg>--preinclude=$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack//collector/subg/features.h</arg>
+      <arg>--debug</arg>
+      <arg>--silent</arg>
+      <arg>-e</arg>
+      <arg>--aeabi</arg>
+      <arg>--thumb</arg>
+      <arg>--diag_suppress=Pa050</arg>
+    </args>
+  </extraOptions>
+
+  <linkerFile>
+    <override>true</override>
+    <path>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack//common/boards/CC13X0_LAUNCHXL/cc13x0lp.icf</path>
+  </linkerFile>
+
+  <linkerExtraOptions>
+    <args>
+        <arg>-f$PROJ_DIR$/Tools/configPkg/linker.cmd</arg>
+        <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/devices/cc13x0/driverlib/bin/iar/driverlib.lib</arg>
+        <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/display/lib/display.arm3</arg>
+        <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/grlib/lib/iar/m3/grlib.a</arg>
+        <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/drivers/lib/drivers_cc13x0.arm3</arg>
+        <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/drivers/rf/lib/rf_multiMode_cc13x0.arm3</arg>
+        <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/kernel/tirtos/packages/ti/dpl/lib/dpl_cc13x0.arm3</arg>
+        <arg>$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/library/tirtos/iar/bin//maclib_secure.a</arg>
+        <arg>--silent</arg>
+        <arg>--cpu=Cortex-M3</arg>
+        <arg>--redirect</arg>
+        <arg>_Printf=_PrintfSmall</arg>
+        <arg>--redirect</arg>
+        <arg>_Scanf=_ScanfSmall</arg>
+        <arg>--config_def ONE_PAGE_NV=1</arg>
+        <arg>--config_def ONE_PAGE_NV_FULL_HDR=1</arg>
+    </args>
+  </linkerExtraOptions>
+
+  <customBuildTools>
+    <customBuildTool name="configuro">   <!-- Custom build tool that will be assigned to a file group -->
+      <fileExtensions>.cfg</fileExtensions>
+      <command>"$XDCROOT$/bin/stderr"</command>
+      <output>
+        <path>$PROJ_DIR$/Tools/configPkg/package.mak</path>
+      </output>
+    </customBuildTool>
+  </customBuildTools>
+
+  <heaps>
+    <heap> <!-- If omitted, id="0" -->
+      <size>0</size>
+    </heap>
+    <heap id="1">
+      <size>0</size>
+    </heap>
+  </heaps>
+  <stacks>
+    <stack> <!-- If omitted, id="0" -->
+      <size>512</size>
+    </stack>
+  </stacks>
+
+  <preBuild>
+    <command>"$XDCROOT$/xs" --xdcpath="$XDCPATH$" iar.tools.configuro -c "$TOOLKIT_DIR$" --cc "$COMPILER_PATH$" --device "$DEVICE$" --compileOptions $COMPILER_ARGS_ROOT_QUOTED$ --linkOptions $LINKER_ARGS_QUOTED$ --profile release --projFile "$PROJ_PATH$"</command>
+  </preBuild>
+
+  <files>
+    <group name="Application">
+      <path copyTo="$PROJ_DIR$/api_mac.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\api\icall\api_mac.c</path>
+      <path copyTo="$PROJ_DIR$/api_mac.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\api\inc\api_mac.h</path>
+      <path copyTo="$PROJ_DIR$/ccfg.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/\ti\boards\CC1350_LAUNCHXL\ccfg.c</path>
+      <path copyTo="$PROJ_DIR$/cllc.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\cllc\cllc.c</path>
+      <path copyTo="$PROJ_DIR$/cllc.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\inc\cllc.h</path>
+      <path copyTo="$PROJ_DIR$/collector.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\collector.c</path>
+      <path copyTo="$PROJ_DIR$/collector.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\collector.h</path>
+      <path copyTo="$PROJ_DIR$/board.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\board.h</path>
+      <path copyTo="$PROJ_DIR$/csf.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\csf.c</path>
+      <path copyTo="$PROJ_DIR$/csf.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\csf.h</path>
+      <path copyTo="$PROJ_DIR$/llc.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\inc\llc.h </path>
+      <path copyTo="$PROJ_DIR$/mac_user_config.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\subg\mac_user_config.c</path>
+      <path copyTo="$PROJ_DIR$/mac_user_config.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\subg\mac_user_config.h</path>
+      <path copyTo="$PROJ_DIR$/mac_user_config_cc13x0_subg_us_euro.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\subg\mac_user_config_cc13x0_subg_us_euro.h</path>
+      <path copyTo="$PROJ_DIR$/mac_user_config_cc13x0_subg_china.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\subg\mac_user_config_cc13x0_subg_china.h</path>
+      <path copyTo="$PROJ_DIR$/mac_user_config_cc13x0_subg_us_euro_200k.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\subg\mac_user_config_cc13x0_subg_us_euro_200k.h</path>
+      <path copyTo="$PROJ_DIR$/main.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\main.c</path>
+      <path copyTo="$PROJ_DIR$/smsgs.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\inc\smsgs.h</path>
+      <path copyTo="$PROJ_DIR$/timer.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\timer.c</path>
+      <path copyTo="$PROJ_DIR$/timer.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\timer.h</path>
+      <path copyTo="$PROJ_DIR$/util.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\util.c</path>
+      <path copyTo="$PROJ_DIR$/util.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\util.h</path>
+      <path copyTo="$PROJ_DIR$/uart_printf.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\uart_printf.c</path>
+      <path copyTo="$PROJ_DIR$/uart_printf.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\uart_printf.h</path>
+
+    <group name="subg">
+       <path copyTo="$PROJ_DIR$/config.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\subg\config.h</path>
+      <path copyTo="$PROJ_DIR$/features.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\collector\subg\features.h</path>
+    </group>
+
+    <group name="ICall">
+      <path copyTo="$PROJ_DIR$/icall.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\icall\src\icall.c</path>
+      <path copyTo="$PROJ_DIR$/icall_addrs.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\stack\tirtos\inc\icall_addrs.h</path>
+      <path copyTo="$PROJ_DIR$/icall_cc2650.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\icall\src\icall_cc2650.c</path>
+      <path copyTo="$PROJ_DIR$/icall_lite_translation.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\icall\src\icall_lite_translation.c</path>
+    </group>
+
+    <group name="LaunchPad">
+      <path copyTo="$PROJ_DIR$/CC13X0_LAUNCHXL.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\CC13X0_LAUNCHXL\CC13X0_LAUNCHXL.c</path>
+      <path copyTo="$PROJ_DIR$/board_key.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\launchpad\board_key.c</path>
+      <path copyTo="$PROJ_DIR$/board_key.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\board_key.h</path>
+      <path copyTo="$PROJ_DIR$/board_lcd.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\launchpad\board_lcd.c</path>
+      <path copyTo="$PROJ_DIR$/board_lcd.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\board_lcd.h</path>
+      <path copyTo="$PROJ_DIR$/board_led.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\launchpad\board_led.c</path>
+      <path copyTo="$PROJ_DIR$/board_led.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\board_led.h</path>
+      <path copyTo="$PROJ_DIR$/board_gpio.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\launchpad\board_gpio.c</path>
+      <path copyTo="$PROJ_DIR$/board_gpio.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\board_gpio.h</path>
+    </group>
+
+    <group name="PALNA">
+      <path copyTo="$PROJ_DIR$/board_palna.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\CC1310_CC1190\board_palna.c</path>
+      <path copyTo="$PROJ_DIR$/board_palna.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\CC1310_CC1190\board_palna.h</path>
+    </group>
+
+
+    <group name="MAC">
+      <path copyTo="$PROJ_DIR$/mac_api.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\inc\mac_api.h</path>
+
+
+      <group name="FreqHop">
+        <path copyTo="$PROJ_DIR$/fh_global.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\fh\fh_global.c</path>
+        <path copyTo="$PROJ_DIR$/fh_map_direct.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\rom\fh_map_direct.h</path>
+
+      </group>
+
+      <group name="HighLevel">
+        <path copyTo="$PROJ_DIR$/mac_cfg.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\high_level\mac_cfg.c</path>
+        <path copyTo="$PROJ_DIR$/mac_high_level.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\high_level\mac_high_level.h</path>
+        <path copyTo="$PROJ_DIR$/hmac_global.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\high_level\hmac_global.c</path>
+        <path copyTo="$PROJ_DIR$/hmac_map_direct.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\rom\hmac_map_direct.h</path>
+      </group>
+
+      <group name="LowLevel">
+        <path copyTo="$PROJ_DIR$/mac_assert.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\low_level\cc13xx\mac_assert.h</path>
+        <path copyTo="$PROJ_DIR$/subg\mac_settings.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\low_level\cc13xx\subg\mac_settings.c</path>
+        <path copyTo="$PROJ_DIR$/subg\mac_settings.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\low_level\cc13xx\subg\mac_settings.h</path>
+        <path copyTo="$PROJ_DIR$/mac_tx.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\low_level\cc13xx\mac_tx.h</path>
+        <path copyTo="$PROJ_DIR$/lmac_global.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\low_level\cc13xx\lmac_global.c</path>
+        <path copyTo="$PROJ_DIR$/lmac_map_direct.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\rom\lmac_map_direct.h</path>
+      </group>
+    </group>
+
+    <group name="OSAL">
+      <path copyTo="$PROJ_DIR$/comdef.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc\comdef.h</path>
+      <path copyTo="$PROJ_DIR$/osal.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\common\osal.c</path>
+      <path copyTo="$PROJ_DIR$/osal.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc\osal.h</path>
+      <path copyTo="$PROJ_DIR$/osal_bufmgr.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\common\osal_bufmgr.c</path>
+      <path copyTo="$PROJ_DIR$/osal_bufmgr.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc\osal_bufmgr.h</path>
+      <path copyTo="$PROJ_DIR$/osal_clock.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\common\osal_clock.c</path>
+      <path copyTo="$PROJ_DIR$/osal_clock.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc\osal_clock.h</path>
+      <path copyTo="$PROJ_DIR$/osal_memory.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc\osal_memory.h</path>
+      <path copyTo="$PROJ_DIR$/osal_memory_icall.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\common\osal_memory_icall.c</path>
+      <path copyTo="$PROJ_DIR$/osal_pwrmgr.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\common\osal_pwrmgr.c</path>
+      <path copyTo="$PROJ_DIR$/osal_pwrmgr.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc\osal_pwrmgr.h</path>
+      <path copyTo="$PROJ_DIR$/osal_timers.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\common\osal_timers.c</path>
+      <path copyTo="$PROJ_DIR$/osal_timers.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\osal\src\inc\osal_timers.h</path>
+    </group>
+
+    <group name="Services">
+      <path copyTo="$PROJ_DIR$/nvintf.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\nv\nvintf.h</path>
+      <path copyTo="$PROJ_DIR$/nvocop.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\nvocop.c</path>
+      <path copyTo="$PROJ_DIR$/nvocop.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\util\nvocop.h</path>
+      <path copyTo="$PROJ_DIR$/nvoctp.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\nv\cc26xx\nvoctp.c</path>
+      <path copyTo="$PROJ_DIR$/nvoctp.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\nv\cc26xx\nvoctp.h</path>
+      <path copyTo="$PROJ_DIR$/saddr.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\saddr\saddr.c</path>
+      <path copyTo="$PROJ_DIR$/saddr.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\saddr\saddr.h</path>
+      <path copyTo="$PROJ_DIR$/sdata.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\services\src\sdata\sdata.h</path>
+    </group>
+
+    <group name="StartUp">
+      <path copyTo="$PROJ_DIR$/macstack.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\stack\src\macstack.c</path>
+      <path copyTo="$PROJ_DIR$/icall_startup.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\rtos\icall_startup.c</path>
+      <path copyTo="$PROJ_DIR$/osaltasks.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\stack\tirtos\src\osaltasks.c</path>
+    </group>
+
+    <group name="HAL">
+      <group name="common">
+        <path copyTo="$PROJ_DIR$/hal_appasrt.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\common\hal_appasrt.c</path>
+        <path copyTo="$PROJ_DIR$/hal_appasrt.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\inc\hal_appasrt.h</path>
+      </group>
+
+      <group name="target">
+        <path copyTo="$PROJ_DIR$/dbg.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\tracer\dbg.c</path>
+        <path copyTo="$PROJ_DIR$/dbg.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\tracer\dbg.h</path>
+        <path copyTo="$PROJ_DIR$/hal_aes.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_aes.c</path>
+        <path copyTo="$PROJ_DIR$/hal_aes.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_aes.h</path>
+        <path copyTo="$PROJ_DIR$/hal_ccm.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_ccm.c</path>
+        <path copyTo="$PROJ_DIR$/hal_ccm.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_ccm.h</path>
+        <path copyTo="$PROJ_DIR$/hal_flash_wrapper.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_flash_wrapper.c</path>
+        <path copyTo="$PROJ_DIR$/hal_mcu.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_mcu.h</path>
+        <path copyTo="$PROJ_DIR$/hal_rtc_wrapper.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_rtc_wrapper.c</path>
+        <path copyTo="$PROJ_DIR$/hal_rtc_wrapper.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_rtc_wrapper.h</path>
+        <path copyTo="$PROJ_DIR$/hal_trng_wrapper.c">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_trng_wrapper.c</path>
+        <path copyTo="$PROJ_DIR$/hal_trng_wrapper.h">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/ti154stack/\hal\src\target\cc2650tirtos\hal_trng_wrapper.h</path>
+      </group>
+    </group>
+
+    <group name="Tools" customBuildTool="configuro">
+       <path copyTo="$PROJ_DIR$/Tools/app.cfg">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack/\common\boards\CC13X0_LAUNCHXL\app.cfg</path>
+    </group>
+ </group>
+
+    <path copyTo="$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack//common/boards/CC13X0_LAUNCHXL/cc13x0lp.icf">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/examples/rtos/CC1350_LAUNCHXL/ti154stack//common/boards/CC13X0_LAUNCHXL/cc13x0lp.icf</path>
+
+    <group name="Documentation" build="false">
+      <path copyTo="$PROJ_DIR$/Board.html">$COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR$/source/ti/boards/CC1350_LAUNCHXL/Board.html</path>
+    </group>
+  </files>
+</iarProjectConnection>

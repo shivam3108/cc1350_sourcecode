@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<projectSpec>
+    <project
+        name="bim_intflash_cc1350lp"
+        device="Cortex M.CC1350F128"
+        cgtVersion="16.9"
+        connection="common/targetdb/connections/TIXDS110_Connection.xml"
+        toolChain="TI"
+        linkerCommandFile="cc13x0_bim_onchip.cmd"
+
+        preBuildStep=""
+        postBuildStep="${CG_TOOL_HEX}  -order MS --memwidth=8 --romwidth=8 --intel -o ${ProjName}.hex ${ProjName}"
+
+        description=""
+        launchWizard="false">
+
+        <!-- Project properties -->
+
+        <property name="products" value="com.ti.SIMPLELINK_CC13X0_SDK:2_10_00_36"/>
+        <property name="xdcToolsVersion" value="3.50.05.12.core"/>
+        <property name="target" value="ti.targets.arm.elf.M3"/>
+        <property name="platform" value="ti.platforms.simplelink:CC1350F128"/>
+        <property name="buildProfile" value="release"/>
+        <property name="isHybrid" value="true"/>
+        <property name="configuroOptions" value="--compileOptions &quot;${COMPILER_FLAGS} &quot; "/>
+
+        <configuration
+            name="FlashOnly"
+        compilerBuildOptions=" -mv7M3 --code_state=16 --abi=eabi -me -O0 --opt_for_speed=0 -g --c99 --gcc --gen_func_subsections=on  --display_error_number --diag_warning=255 --diag_wrap=off
+        -DBOOT_LOADER
+        -DKEEP_INTVECS
+
+        -I${CG_TOOL_ROOT}/include
+        -I${CCWARE_LOC}/
+        -I${CCWARE_LOC}/driverlib
+        -I${CCWARE_LOC}/inc
+        "
+        linkerBuildOptions="
+        --define KEEP_INTVECS=1
+        -l${CCWARE_LOC}/driverlib/bin/ccs/driverlib.lib
+        -x
+        --diag_suppress=16002-D
+        --diag_suppress=10247-D
+        --diag_suppress=10325-D
+        --diag_suppress=10229-D
+        -I${CG_TOOL_ROOT}/lib
+        -I${CG_TOOL_ROOT}/include
+        -I${CCWARE_LOC}/driverlib/bin/ccs/
+        "
+        >
+        </configuration>
+        <pathVariable name="PROJECT_IMPORT_LOC" path="." scope="project"/>
+        <pathVariable name="EXAMPLE_SRC" path="${PROJECT_IMPORT_LOC}/../../../../../../../source/ti/ti154stack/source/" scope="project"/>
+        <pathVariable name="DRIVER_LOC" path="${COM_TI_SIMPLELINK_CC13X0_SDK_INSTALL_DIR}/source" scope="project"/>
+        <pathVariable name="CCWARE_LOC" path="${DRIVER_LOC}/ti/devices/cc13x0" scope="project"/>
+
+
+        <!-- Application Folder -->
+        <file path="EXAMPLE_SRC/bim_onchip/bim_main.c" openOnCreation="" excludeFromBuild="false" action="copy" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="EXAMPLE_SRC/bim_onchip/oad_target.h" openOnCreation="" excludeFromBuild="false" action="copy" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="EXAMPLE_SRC/bim_onchip/ccfg_app.c" openOnCreation="" excludeFromBuild="false" action="copy" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+        <file path="CCWARE_LOC/startup_files/startup_ccs.c" openOnCreation="" excludeFromBuild="false" action="copy" targetDirectory="Application" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+		<!-- TOOLS Folder -->
+        <file path="EXAMPLE_SRC/common/ccs/cc13x0_bim_onchip.cmd" openOnCreation="" excludeFromBuild="false" action="copy" targetDirectory="TOOLS" createVirtualFolders="true" applicableConfigurations="FlashOnly">
+        </file>
+
+    </project>
+</projectSpec>
