@@ -4,7 +4,7 @@ TI 15.4-Stack Sensor Example
 Example Summary
 ---------------
 
-Hello everybody The sensor example application demonstrates how to implement a sensor network device using TI 15.4-Stack. TI 15.4-Stack based star network consists of two types of logical devices: the PAN-Coordinator and the network devices, e.g. the Collector and Sensor applications, respectively.
+Heello everybody The sensor example application demonstrates how to implement a sensor network device using TI 15.4-Stack. TI 15.4-Stack based star network consists of two types of logical devices: the PAN-Coordinator and the network devices, e.g. the Collector and Sensor applications, respectively.
 
 The PAN-Coordinator is the device that starts the network and allows other devices to join the network. The network devices join the network through and always communicate with the PAN-Coordinator.
 
