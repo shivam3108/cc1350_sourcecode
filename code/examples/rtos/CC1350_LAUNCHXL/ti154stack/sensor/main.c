@@ -2,7 +2,7 @@
 
  @file main.c
 
- @brief main entry of the example application
+ @brief main entry of the example application hello 
 
  Group: WCS LPC
  Target Device: CC13xx
